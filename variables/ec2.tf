@@ -5,9 +5,7 @@ resource "aws_instance" "terraform" {
     vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id]
     tags = var.tags
 
-    tags = {
-        Name = "terraform"
-   }
+    
 } 
  
 resource "aws_security_group" "allow_ssh_terraform" {
